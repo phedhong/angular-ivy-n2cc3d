@@ -1,0 +1,16 @@
+<h2>Document Upload</h2>
+
+<p><i>Select a document from the list to see details.</i></p>
+<ul>
+  <li *ngFor="let document of documents" (click)="selectDocument(document)">
+    {{ document.name }}
+  </li>
+</ul>
+
+<app-document-detail
+  *ngIf="selectDocument"
+  [document]="selectDocument"
+></app-document-detail>
+
+<li>{{ document.name }}</li>
+<li></li>
